@@ -15,7 +15,6 @@ export const components = {
     hero: Hero,
     doesNotExist: DoesNotExist
   };
-
   /**
    * Get the Storyblok API exports a StoryblokApi object to be used in the application
    * @returns {StoryblokApi}

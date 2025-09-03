@@ -1,12 +1,12 @@
-
+import ServerComponent from "./ServerComponent";
 import { storyblokEditable } from "@storyblok/react";
 
 export default function Hero({ blok }) {
-    console.log("HERO", blok)
+    console.log(blok)
 
     let heroClasses = `h-[50vh] bg-amber-400/25`
 
-    console.log(blok.background_image?.filename)
+    // console.log(blok.background_image?.filename)
 
     return (
         <div {...storyblokEditable(blok)} className={heroClasses} style={{

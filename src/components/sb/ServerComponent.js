@@ -4,6 +4,9 @@ import { StoryblokServerComponent } from "@storyblok/react/rsc"
 import DoesNotExist from "./DoesNotExist"
 
 export default function ServerComponent({ blok }) {
+
+    console.log(  (blok.component));
+
     const Component = components[blok.component];
     if(!Component) {
         return <DoesNotExist blok={blok} />

@@ -3,6 +3,7 @@ import {
     } from '@storyblok/react/rsc';
 
 import ServerComponent from './ServerComponent';
+
     
     export default function Page({ blok }) {
     return (

@@ -5,7 +5,7 @@ export default function Grid({ blok }) {
   return (
     <div
       {...storyblokEditable(blok)}
-      className="grid gap-2 w-full justify-items-center grid-cols-[repeat(auto-fit,minmax(12.625rem,1fr))]"
+      className="grid gap-2 justify-items-center grid-cols-[repeat(auto-fit,minmax(12.625rem,1fr))]"
     >
       {blok.columns.map((nestedBlok, index) => (
         <div

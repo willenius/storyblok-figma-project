@@ -10,9 +10,6 @@ export default function Feature({ blok }) {
       className="feature shadow-md p-4 rounded-md w-75"
     >
       <img src={blok.image.filename} alt="Image"/>
-      <h2 className="text-2xl font-bold">{blok.name}</h2>
-      <img src={blok?.name.filename}/>
-      <p className="text-gray-600">{blok.description}</p>
       <div className="flex flex-col gap-2">
         {blok?.cta?.map((nestedBlok) => (
           <ServerComponent blok={nestedBlok} key={nestedBlok._uid} />

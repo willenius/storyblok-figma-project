@@ -9,6 +9,7 @@ import Hero from '@/components/sb/Hero';
 import GridProducts from '@/components/sb/GridProducts';
 import SubHero from '@/components/sb/SubHero';
 import Products_Hero from '@/components/sb/Products_Hero';
+import About_Hero from '@/components/sb/About_Hero'
 
 export const components = {
     // Add your components here
@@ -20,6 +21,7 @@ export const components = {
     subHero: SubHero,
     gridProducts: GridProducts,
     products_hero: Products_Hero,
+    about_hero: About_Hero,
     doesNotExist: DoesNotExist
   };
   /**

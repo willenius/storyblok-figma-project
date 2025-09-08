@@ -7,7 +7,11 @@ import Grid from '@/components/sb/Grid';
 import DoesNotExist from '@/components/sb/DoesNotExist';
 import Hero from '@/components/sb/Hero';
 import GridProducts from '@/components/sb/GridProducts';
+<<<<<<< HEAD
 import SubHero from '@/components/sb/SubHero';
+=======
+import Products_Hero from '@/components/sb/Products_Hero';
+>>>>>>> 4aad500e17d0cd0de1c30c3adbc29a747a830c63
 export const components = {
     // Add your components here
     page: Page,
@@ -17,6 +21,7 @@ export const components = {
     hero: Hero,
     subHero: SubHero,
     gridProducts: GridProducts,
+    products_hero: Products_Hero,
     doesNotExist: DoesNotExist
   };
   /**

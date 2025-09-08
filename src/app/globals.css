@@ -32,3 +32,42 @@ body {
 .hero-button:hover{
   color: grey;
 }
+
+
+/* styling for product-grid in GridProducts.js */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* alltid 4 kolumner */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.gridProducts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* lika stora bilder */
+.gridProducts img {
+  width: 100%;
+  height: 200px;       /* fast höjd */
+  object-fit: cover;   /* beskär så de fyller boxen */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.gridProducts img:hover {
+  transform: scale(1.05);
+}
+
+.product-title {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+}

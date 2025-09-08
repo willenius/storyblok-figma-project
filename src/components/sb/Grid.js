@@ -9,26 +9,27 @@ export default async function Grid({ blok }) {
   return (
     <div
       {...storyblokEditable(blok)}
-      className="flex flex-row gap-4 overflow-x-auto py-4"
+      className="grid grid-cols-2 gap-1 justify-items-center"
     >
-      {response.data.stories.map((p) => (
+      {response.data.stories.map((p, index) => (
         <div
           key={p.id}
-          
-          className="flex flex-col items-center justify-center w-48 h-48 rounded-lg overflow-hidden shadow-md"
+          className={`flex flex-col items-center justify-start w-64 h-[28rem] rounded-lg overflow-hidden shadow-md bg-white
+          ${index === 0 ? "col-span-2 -translate-y-2" : ""}`}
         >
           <img
             src={p.content.image.filename}
             alt={p.content.title}
-            className="w-full h-full object-cover"
+            className="w-full h-48 object-cover"
           />
           <p className="productTitle mt-2 text-center">{p.content.title}</p>
-          <p>{p.content.price}</p>
+          <p className="text-center font-semibold">{p.content.price}</p>
         </div>
       ))}
     </div>
   );
 }
+
 async function getProducts() {
   const storyblokApi = getStoryblokApi();
   return await storyblokApi.get("cdn/stories/", {

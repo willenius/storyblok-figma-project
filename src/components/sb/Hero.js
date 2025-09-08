@@ -16,7 +16,7 @@ export default function Hero({ blok }) {
     >
       <div className="min-h-[60vh] flex flex-col items-center justify-center text-center master-Div">
         {/* H1 med svart text och text shadow */}
-        <h1 className="mt-40 text-black text-5xl font-bold font-sans drop-shadow-lg">
+        <h1 className="mt-50 text-black text-5xl font-bold font-sans drop-shadow-lg">
           {blok.title}
         </h1>
         {/* Description under H1 med mindre font och grå text + shadow */}

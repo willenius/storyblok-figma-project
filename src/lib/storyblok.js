@@ -7,6 +7,7 @@ import Grid from '@/components/sb/Grid';
 import DoesNotExist from '@/components/sb/DoesNotExist';
 import Hero from '@/components/sb/Hero';
 import GridProducts from '@/components/sb/GridProducts';
+import Products_Hero from '@/components/sb/Products_Hero';
 export const components = {
     // Add your components here
     page: Page,
@@ -15,6 +16,7 @@ export const components = {
     teaser: Teaser,
     hero: Hero,
     gridProducts: GridProducts,
+    products_hero: Products_Hero,
     doesNotExist: DoesNotExist
   };
   /**

@@ -13,29 +13,31 @@ export default function Hero({ blok }) {
       className={heroClasses}
       style={{ backgroundColor: blok?.background_color }}
     >
-      <div className="min-h-[60vh] flex flex-col items-center justify-center text-center">
-        {/* H1 med svart text och text shadow */}
-        <h1 className="mt-10 text-black text-3xl font-bold drop-shadow-lg">
-          {blok.title}
-        </h1>
-        {/* Description under H1 med mindre font och grå text + shadow */}
-        <h4 className="text-gray-600 text-2xl drop-shadow-md">
-          {blok.description}
-        </h4>
-
-        {/* Knapp */}
-        <button className="bg-white text-black border-2 border-black px-6 py-3 rounded cursor-pointer hover:bg-gray-100 transition">
-          {blok.button}
-        </button>
-
+      <div className="min-h-[60vh] flex flex-col items-center justify-center text-center master-Div">
+        {" "}
+        {/* H1 med svart text och text shadow */}{" "}
+        <h1 className="mt-20 text-black text-5xl font-bold font-sans drop-shadow-lg">
+          {" "}
+          {blok.title}{" "}
+        </h1>{" "}
+        {/* Description under H1 med mindre font och grå text + shadow */}{" "}
+        <h4 className="mt-3 text-gray-400 text-lg font-sans max-w-xl mx-auto leading-relaxed">
+          {" "}
+          {blok.description}{" "}
+        </h4>{" "}
+        <br></br> {/* Knapp */}{" "}
+        <button className="font-bold text-black border border-black px-10 py-3 rounded-none cursor-pointer transition hero-button">
+          {" "}
+          {blok.button}{" "}
+        </button>{" "}
         {blok?.image?.filename && (
           <img
             src={blok.image.filename}
             alt={blok.image.alt || "Hero image"}
-            className="mt-10 w-4/5 max-w-[1000px] h-[30vh] object-cover rounded shadow-md"
+            className="mt-10 w-5/5 max-w-[1000px] h-[50vh] justify-content: center object-cover rounded shadow-md"
           />
-        )}
-      </div>
+        )}{" "}
+      </div>{" "}
     </div>
   );
 }

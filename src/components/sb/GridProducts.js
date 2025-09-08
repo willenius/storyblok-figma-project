@@ -16,6 +16,7 @@ export default async function GridProducts({ blok }) {
           <div key={p.id} className="gridProducts">
             <img src={p.content.image.filename} alt={p.content.title} />
             <p className="product-title">{p.content.title}</p>
+            <p className="product-title">{p.content.price}</p>
           </div>
         ))}
       </div>

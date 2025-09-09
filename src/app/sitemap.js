@@ -1,9 +1,9 @@
-/* import { getStoryblokApi } from "@/lib/storyblok"
+import { getStoryblokApi } from "@/lib/storyblok"
 
 export default async function sitemap() {
     try {
 
-        const baseUrl = 'https://nackademin-webb-24-cms-lessons.vercel.app'
+        const baseUrl = 'https://storyblok-figma-project.vercel.app/'
         
         const staticPaths = [
             {
@@ -13,7 +13,7 @@ export default async function sitemap() {
                 priority: 1
             },
             {
-                url: `${baseUrl}/about-us/`,
+                url: `${baseUrl}/about/`,
                 lastModified: new Date(),
                 changeFrequency: 'monthly',
                 priority: 0.8
@@ -38,4 +38,4 @@ export default async function sitemap() {
     } catch (error) {
         return []
     }
-  } */
+  } 

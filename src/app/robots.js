@@ -1,4 +1,4 @@
-/* export default function robots() {
+export default function robots() {
     const baseUrl = 'https://nackademin-webb-24-cms-lessons.vercel.app'
     return {
       rules: {
@@ -8,4 +8,4 @@
       },
       sitemap: `${baseUrl}/sitemap.xml`,
     }
-  } */
+  }

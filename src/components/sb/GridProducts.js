@@ -4,7 +4,7 @@ import { getStoryblokApi } from "@/lib/storyblok";
 
 export default async function GridProducts({ blok }) {
   const response = await getProducts()
-  console.log("product",response.data)
+  
   return (
     <div
       {...storyblokEditable(blok)}

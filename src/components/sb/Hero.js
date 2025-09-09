@@ -4,7 +4,7 @@ import ServerComponent from "./ServerComponent";
 import { storyblokEditable } from "@storyblok/react";
 
 export default function Hero({ blok }) {
-  console.log("blok", blok)
+  
   let heroClasses = `h-[60vh] mt-[0px] mb-[0px] flex flex-col justify-center items-center text-center gap-4`;
   /* om header margin inte fungerar så är det pga MT^^^^ */
 

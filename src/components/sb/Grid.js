@@ -4,12 +4,12 @@ import { getStoryblokApi } from "@/lib/storyblok";
 
 export default async function Grid({ blok }) {
   const response = await getProducts();
-  console.log("price", response.data.content);
+  let heroClasses = `mt-[0px] mb-[0px] flex flex-col justify-center items-center text-center gap-4`;
 
   return (
     <div
       {...storyblokEditable(blok)}
-      className="grid grid-cols-2 gap-1 justify-items-center"
+      className={`${heroClasses} grid grid-row-3 gap-1 justify-items-center`}
     >
       {response.data.stories.map((p, index) => (
         <div

@@ -2,7 +2,6 @@ import { apiPlugin, storyblokInit } from '@storyblok/react/rsc';
 
 import Page from '@/components/sb/Page';
 import Teaser from '@/components/sb/Teaser';
-import Feature from '@/components/sb/Feature';
 import Grid from '@/components/sb/Grid';
 import DoesNotExist from '@/components/sb/DoesNotExist';
 import Hero from '@/components/sb/Hero';
@@ -14,7 +13,6 @@ import About_Hero from '@/components/sb/About_Hero'
 export const components = {
     // Add your components here
     page: Page,
-    feature: Feature,
     grid: Grid,
     teaser: Teaser,
     hero: Hero,

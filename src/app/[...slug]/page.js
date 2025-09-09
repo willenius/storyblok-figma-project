@@ -23,16 +23,13 @@ export default async function Page({ params }) {
         style={{ backgroundColor: blok?.background_color || "transparent" }}
       >
         <div className="min-h-[60vh] flex flex-col items-center justify-center text-center master-Div">
-          <h1 className="mt-20 text-black text-5xl font-bold drop-shadow-lg">
+          <h1 className="mt-20 text-white text-5xl font-bold drop-shadow-lg">
             {blok.title}
           </h1>
           <h4 className="mt-3 text-gray-400 text-lg max-w-xl mx-auto leading-relaxed">
-            {blok.description}
+            {blok.info}
           </h4>
           <br />
-          <button className="font-bold text-black border border-black px-10 py-3 rounded-none cursor-pointer transition hero-button">
-            {blok.button}
-          </button>
           {blok?.image?.filename && (
             <img
               src={blok.image.filename}

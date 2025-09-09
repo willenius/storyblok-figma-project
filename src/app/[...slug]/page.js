@@ -17,28 +17,28 @@ export default async function Page({ params }) {
     const blok = data.data.story.content;
 
     return (
-      <div
-        {...storyblokEditable(blok)}
-        className="hero-section"
-        style={{ backgroundColor: blok?.background_color || "transparent" }}
-      >
-        <div className="min-h-[60vh] flex flex-col items-center justify-center text-center master-Div">
-          <h1 className="mt-20 text-white text-5xl font-bold drop-shadow-lg">
-            {blok.title}
-          </h1>
-          <h4 className="mt-3 text-gray-400 text-lg max-w-xl mx-auto leading-relaxed">
-            {blok.info}
-          </h4>
-          <br />
+      <div {...storyblokEditable(blok)} className="product-page">
+        <div className="product-container">
           {blok?.image?.filename && (
-            <img
+            <div className="product-image">
+            <img 
               src={blok.image.filename}
-              alt={blok.image.alt || "Hero image"}
-              className="mt-10 w-full max-w-[1000px] h-[50vh] object-cover rounded shadow-md"
+              alt={blok.image.alt || "product image"}
             />
+
+            </div>
           )}
+
+          <div className="product-info">
+            <h1 className="product-title">{blok.title}</h1>
+            <p className="product-price">{blok.price}</p>
+            <p className="product-description">{blok.info}</p>
+
+          </div>
         </div>
       </div>
+
+
     );
   } catch (error) {
     return notFound();

@@ -2,7 +2,7 @@ import ServerComponent from "./ServerComponent";
 import { storyblokEditable } from "@storyblok/react";
 
 export default function Products_Hero({ blok }) {
-  let heroClasses = `h-[60vh] mt-[0px] mb-[0px] flex flex-col justify-center items-center text-center gap-4`;
+  let heroClasses = `mt-[0px] mb-[0px] flex flex-col justify-center items-center text-center gap-4`;
 
   return (
     <div
@@ -10,8 +10,10 @@ export default function Products_Hero({ blok }) {
     className={heroClasses}
     style={{ backgroundColor: blok?.background_color }}
   >
-    <h1>{blok.title}</h1>
-    <p>{blok.description}</p>
+    <div className="contentBlock">
+        <h1 className="aboutTitle">{blok.title}</h1>
+        <p className="aboutdc">{blok.description}</p>
+    </div>
 </div>
   )
 };

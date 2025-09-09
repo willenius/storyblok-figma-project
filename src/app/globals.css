@@ -105,15 +105,21 @@ body {
 .product-page {
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 80vh;
   padding: 2rem;
   background-color: #f2f4f7; 
 }
 
 .product-container {
   display: flex;
-  max-width: 1200px;
+  max-width: 1000px;
   width: 100%;
-  gap: 3rem;
+  gap: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 /* Bild */
@@ -126,8 +132,9 @@ body {
 }
 .product-image img {
   max-width: 100%;
-  height: auto;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 /* Info */
@@ -152,7 +159,24 @@ body {
 }
 
 .product-description {
+  border-top: 1px solid;
   font-size: 1rem;
   line-height: 1.6;
   color: #444;
+}
+
+.add-to-cart {
+  margin-top: 2rem;
+  padding: 0.75rem 2rem;
+  background-color: #111;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #333;
 }

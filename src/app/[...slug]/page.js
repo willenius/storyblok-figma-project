@@ -33,6 +33,7 @@ export default async function Page({ params }) {
             <h1 className="product-title">{blok.title}</h1>
             <p className="product-price">{blok.price}</p>
             <p className="product-description">{blok.info}</p>
+            <button className="add-to-cart">Add to cart</button>
 
           </div>
         </div>

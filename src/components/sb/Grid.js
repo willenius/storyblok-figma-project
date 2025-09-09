@@ -10,6 +10,7 @@ export default async function Grid({ blok }) {
     <div
       {...storyblokEditable(blok)}
       className={`${heroClasses} grid grid-row-3 gap-1 justify-items-center`}
+      style={{ backgroundColor: blok?.background_color }}
     >
       {response.data.stories.map((p, index) => (
         <div

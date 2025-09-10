@@ -2,7 +2,7 @@ import { getStoryblokApi } from "@/lib/storyblok";
 
 export default async function sitemap() {
   try {
-    const baseUrl = "https://storyblok-figma-project.vercel.app/";
+    const baseUrl = "https://storyblok-figma-project.vercel.app";
 
     const staticPaths = [
       {
@@ -12,7 +12,7 @@ export default async function sitemap() {
         priority: 1,
       },
       {
-        url: `${baseUrl}'/products/`,
+        url: `${baseUrl}/products/`,
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.8,

@@ -27,14 +27,14 @@ export default async function sitemap() {
 
     const storyblok = getStoryblokApi();
 
-    const blogPosts = await storyblok.get("cdn/stories/", {
+    const productDetails = await storyblok.get("cdn/stories/", {
       version: "published",
-      starts_with: "posts",
+      starts_with: "products",
     });
 
-    const dynamicPaths = blogPosts.data.stories.map((blogPost) => ({
-      url: `${baseUrl}/posts/${blogPost.slug}/`,
-      lastModified: new Date(blogPost.updated_at) || new Date(),
+    const dynamicPaths = productDetails.data.stories.map((product) => ({
+      url: `${baseUrl}/products/${product.slug}/`,
+      lastModified: new Date(product.updated_at) || new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
     }));

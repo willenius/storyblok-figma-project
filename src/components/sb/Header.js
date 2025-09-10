@@ -1,23 +1,33 @@
 import { storyblokEditable } from "@storyblok/react";
 
 export default function Header({ blok }) {
-  let heroClasses =
-    "h-[20vh] flex flex-col justify-center items-center text-center gap-4 bg-gray-100 shadow";
-
-    
   return (
-    <header {...storyblokEditable(blok)} className={heroClasses}>
-      {/* Visa loggan om den finns */}
-      {blok.logo?.filename && (
-        <img
-          src={blok.logo.filename}
-          alt={blok.logo.alt || "Logo"}
-          className="h-12 w-auto"
-        />
-      )}
+    <>
+      {/* Svart header högst upp */}
+      <header {...storyblokEditable(blok)} className="header">
+        <nav className="links-nav">
+          <a href="/">{blok.link_home}</a>
+          <a href="/products">{blok.link_products}</a>
+          <a href="/about">{blok.link_about}</a>
+        </nav>
 
-      {/* Visa labeln */}
-      {blok.label && <h1 className="text-xl font-bold">{blok.label}</h1>}
-    </header>
+        {blok.logo?.filename && (
+          <img
+            src={blok.logo.filename}
+            alt={blok.logo.alt || "Logo"}
+            className="header-logo"
+          />
+        )}
+      </header>
+
+      {/* Vitt block under med endast sökfält */}
+      <div className="links-section">
+        <input
+          type="text"
+          placeholder="Search..."
+          className="search-input"
+        />
+      </div>
+    </>
   );
 }

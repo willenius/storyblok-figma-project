@@ -180,3 +180,66 @@ body {
 .add-to-cart:hover {
   background-color: #333;
 }
+
+
+
+/* ---------------- HEADER ---------------- */
+.header {
+  width: 100%;
+  background-color: #000; 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centrerar loggan */
+  padding: 10px 20px;
+  height: 60px; 
+  position: relative;
+}
+
+.header-logo {
+  position: absolute;
+  height: 40px;
+  width: auto;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---------------- LÄNKAR I HEADER ---------------- */
+.links-nav {
+  position: absolute;
+  left: 20px; /* fäst dem till vänster */
+  display: flex;
+  gap: 20px;
+}
+
+.links-nav a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white; /* vita länkar */
+  transition: color 0.3s ease;
+}
+
+.links-nav a:hover {
+  color: #aaa; /* lite ljusare grå vid hover */
+}
+
+/* ---------------- SÖK ---------------- */
+.links-section {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center; /* centrera search */
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search-input {
+  width: 250px;
+  padding: 8px 12px;
+  border: 2px solid #000; 
+  border-radius: 4px;
+  font-size: 1rem;
+}

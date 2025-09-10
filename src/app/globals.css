@@ -233,6 +233,7 @@ body {
   justify-content: center; /* centrera search */
   align-items: center;
   padding: 15px 20px;
+  color: black;
   border-bottom: 1px solid #ddd;
 }
 

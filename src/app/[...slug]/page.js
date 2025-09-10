@@ -1,15 +1,16 @@
-// Example of a dynamic page ex
-// about-us, blog/post-title, contact-us, etc.
-
 import { getStoryblokApi } from "@/lib/storyblok";
 import { storyblokEditable } from "@storyblok/react/rsc";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic"; // Viktigt för att undvika cache 404
+
 export default async function Page({ params }) {
   try {
-    const { slug } = params;
-    const data = await fetchData(slug);
+    // här tar vi emot slug som en array
+    const slugArray = params.slug;
+    const data = await fetchData(slugArray);
 
+    // om vi inte hittar storyn eller om det är en config
     if (!data?.data?.story || data.data.story.content.component === "config") {
       throw new Error("CONFIG_ERROR");
     }
@@ -64,9 +65,10 @@ export default async function Page({ params }) {
   }
 }
 
-export async function fetchData(slug) {
+export async function fetchData(slugArray) {
   const storyblokApi = getStoryblokApi();
-  return await storyblokApi.get(`cdn/stories/${slug.join("/")}`, {
+  const path = slugArray ? slugArray.join("/") : "home"; // fallback till "home"
+  return await storyblokApi.get(`cdn/stories/${path}`, {
     version: process.env.NODE_ENV === "production" ? "published" : "draft",
   });
 }

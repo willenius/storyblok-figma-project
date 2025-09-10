@@ -67,6 +67,6 @@ export default async function Page({ params }) {
 export async function fetchData(slug) {
   const storyblokApi = getStoryblokApi();
   return await storyblokApi.get(`cdn/stories/${slug.join("/")}`, {
-    version: "draft",
+    version: process.env.NODE_ENV === "production" ? "published" : "draft",
   });
 }

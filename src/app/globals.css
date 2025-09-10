@@ -156,6 +156,7 @@ body {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
+  color: #000000;
 }
 
 .product-description {
@@ -165,9 +166,14 @@ body {
   color: #444;
 }
 
-.add-to-cart {
+.product-actions {
   margin-top: 2rem;
-  padding: 0.75rem 2rem;
+  width: 100%;
+}
+.add-to-cart {
+  display: block;
+  width: 50%;
+  padding: 1rem;
   background-color: #111;
   color: white;
   font-weight: 600;
@@ -175,6 +181,8 @@ body {
   cursor: pointer;
   border-radius: 4px;
   transition: background 0.2s ease;
+  text-align: center;
+  margin-top: -2rem;
 }
 
 .add-to-cart:hover {
@@ -243,4 +251,33 @@ body {
   border: 2px solid #000; 
   border-radius: 4px;
   font-size: 1rem;
+}
+
+/* sizes  */
+
+.product-sizes {
+  margin: 1rem 0;
+}
+
+.sizes-list {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.size-tag {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  font-weight: 500;
+  background: #f9f9f9;
+}
+
+.size-tag:hover {
+  cursor: pointer;
+  background-color: #9d9797;
+}
+
+.size-headline {
+  margin-bottom: 0.5rem;
 }

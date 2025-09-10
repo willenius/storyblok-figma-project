@@ -5,7 +5,7 @@ import { StoryblokStory } from "@storyblok/react/rsc";
  * Home page - renders the Storyblok story through which all components are rendered
  * @returns {Promise<{story: StoryblokStory}>}
  */
-export default async function Home() {
+export default async function Products() {
   const { data } = await fetchData();
   return (
     <div className="page">

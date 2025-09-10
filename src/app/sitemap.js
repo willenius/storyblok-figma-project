@@ -27,13 +27,13 @@ export default async function sitemap() {
 
     const storyblok = getStoryblokApi();
 
-    const productDetails = await storyblok.get("cdn/stories/products", {
+    const productDetails = await storyblok.get("cdn/stories/", {
       version: "published",
       starts_with: "products",
     });
 
     const dynamicPaths = productDetails.data.stories.map((product) => ({
-      url: `${baseUrl}/products/${product.full_slug}/`,
+      url: `${baseUrl}/${product.full_slug}/`,
       lastModified: new Date(product.updated_at) || new Date(),
       changeFrequency: "monthly",
       priority: 0.6,
@@ -41,6 +41,7 @@ export default async function sitemap() {
 
     return [...staticPaths, ...dynamicPaths];
   } catch (error) {
+    console.error("Error generating sitemap:", error);
     return [];
   }
 }

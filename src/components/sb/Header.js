@@ -3,7 +3,7 @@ import { storyblokEditable } from "@storyblok/react";
 export default function Header({ blok }) {
   return (
     <>
-      {/* Svart header högst upp */}
+      {/* Svart header med swoosh loggan och a länkar till varje  sida*/}
       <header {...storyblokEditable(blok)} className="header">
         <nav className="links-nav">
           <a href="/">{blok.link_home}</a>

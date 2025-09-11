@@ -24,7 +24,7 @@ export default async function Page({ params }) {
             <div className="product-image">
               <img
                 src={blok.image.filename}
-                alt={blok.image.alt || "product image"}
+                alt={blok.image.alt}
               />
             </div>
           )}

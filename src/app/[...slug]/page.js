@@ -52,7 +52,7 @@ export default async function Page({ params }) {
             {/* Add to cart */}
             <div className="product-actions">
               <button className="add-to-cart">
-                {blok.addtocart_button || "Add to cart"}
+                {blok.addtocart_button}
               </button>
             </div>
           </div>

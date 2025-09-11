@@ -271,6 +271,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   background: #f9f9f9;
+  color: black;
 }
 
 .size-tag:hover {
@@ -280,4 +281,5 @@ body {
 
 .size-headline {
   margin-bottom: 0.5rem;
+  color: black;
 }
